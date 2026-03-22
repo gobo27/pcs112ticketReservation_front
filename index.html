@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dbd9d9;
+        }
+    </style>
+    <title>MSEUF-CI Employees</title>
+</head>
+<body class="w-screen h-full">
+    <h1 class="text-center text-red-800 text-4xl m-4 font-bold">ticket reservation</h1>
+    <div id="container" class="flex justify-center">
+        <div id="form" class="border-2 border-red-800 rounded-lg w-50% px-4 py-2">
+            <div class="w-full">
+                <div class=" gap-4">
+                    <label for="">Title: </label><br>
+                    <input type="text" name="title" id="title" class="border-b border-red-600 w-55"><br>
+
+                    <label for="">Seat Number:</label><br>
+                    <input type="int" name="seatNum" id="seatNum" class="border-b border-red-600 w-55"><br>
+                </div>
+            
+                <div">
+                    <label for="">Date:</label><br>
+                    <input type="date" name="date" id="date" class=" border-b border-red-600 w-55 "><br>
+
+                    <label for="">Name: </label><br>
+                    <input type="text" name="name" id="name" class=" border-b border-red-600 w-55 ">
+                </div>
+            
+
+                <div class="gap-3">
+                    <button id="add" class="border-red-800 border rounded-lg px-2 mt-4 w-35 hover:bg-red-800 hover:text-white"> Reserve </button>
+                    <button id="update" class="border-red-800 border rounded-lg px-2 mt-4 w-35 hover:bg-red-800 hover:text-white"> Update</button>
+                    <input type="hidden" id="ID">
+                </div>
+            
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="mt-6 px-20  overflow-y-auto h-screen flex justify-center">
+        <table class="table-auto border-spacing-0 border-2 border-red-800 h-1/2">
+            <thead class="sticky top-0 z-10">
+                <tr class="bg-red-900">
+                    <th class="p-3 text-left text-white">Title</th>
+                    <th class="p-3 text-left text-white">Sear Number</th>
+                    <th class="p-3 text-left text-white">Date</th>
+                    <th class="p-3 text-left text-white">Name</th>
+                    <th class="p-3 text-left text-white">Action</th>
+                </tr>
+            </thead>
+            <tbody id="content"></tbody>
+        </table>
+    </div>
+
+
+
+        <script src="index.js"></script>
+</body>
+</html>
