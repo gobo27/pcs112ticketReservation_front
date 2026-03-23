@@ -16,68 +16,152 @@
     }
 
     td, th {
-        border: 1px solid #dddddd;
+        border: 1px solid #0F2854;
         text-align: center;
         padding: 8px;
     }
 
     tr:nth-child(even) {
-        background-color: #dbd9d9;
+        background-color:#4988C4;
         }
     </style>
-    <title>MSEUF-CI Employees</title>
+    <title>ticket reservation</title>
 </head>
-<body class="w-screen h-full">
-    <h1 class="text-center text-red-800 text-4xl m-4 font-bold">ticket reservation</h1>
-    <div id="container" class="flex justify-center">
-        <div id="form" class="border-2 border-red-800 rounded-lg w-50% px-4 py-2">
-            <div class="w-full">
-                <div class=" gap-4">
-                    <label for="">Title: </label><br>
-                    <input type="text" name="title" id="title" class="border-b border-red-600 w-55"><br>
+<body class="min-h-screen bg-gradient-to-b from-[#221738] to-[#3C7055] p-8">
+    <h1 class="text-center text-white text-4xl mb-8 font-bold">Ticket Reservation</h1>
+    <div class="px-8 py-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">  
+        <div class="cursor-pointer group">
+            <div class="relative aspect-[2/3] rounded-sm overflow-hidden mb-2">
+                <img src="https://image.tmdb.org/t/p/original/jfNebOOxYBzbJ37EU94cIOkRzDU.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+            </div>
 
-                    <label for="">Seat Number:</label><br>
-                    <input type="int" name="seatNum" id="seatNum" class="border-b border-red-600 w-55"><br>
+            <div class="space-y-1">
+                <div class="flex items-center gap-2 text-[10px] text-gray-400">
+                    <span class="flex items-center text-yellow-500 font-bold">★ <span class="ml-0.5 text-gray-400 font-normal">Now Showing</span></span>
+                    <span>2026</span>
                 </div>
-            
-                <div">
-                    <label for="">Date:</label><br>
-                    <input type="date" name="date" id="date" class=" border-b border-red-600 w-55 "><br>
-
-                    <label for="">Name: </label><br>
-                    <input type="text" name="name" id="name" class=" border-b border-red-600 w-55 ">
-                </div>
-            
-
-                <div class="gap-3">
-                    <button id="add" class="border-red-800 border rounded-lg px-2 mt-4 w-35 hover:bg-red-800 hover:text-white"> Reserve </button>
-                    <button id="update" class="border-red-800 border rounded-lg px-2 mt-4 w-35 hover:bg-red-800 hover:text-white"> Update</button>
-                    <input type="hidden" id="ID">
-                </div>
-            
+                
+                <h3 class="text-white text-[13px] font-medium leading-tight group-hover:text-blue-400 transition-colors">
+                    Frozen 2
+                </h3>
             </div>
         </div>
 
+        <div class="cursor-pointer group">
+            <div class="relative aspect-[2/3] rounded-sm overflow-hidden mb-2">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.BInjBxbUuko7BZPhluZTAAHaKk?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="space-y-1">
+                <div class="flex items-center gap-2 text-[10px] text-gray-400">
+                    <span class="flex items-center text-yellow-500 font-bold">★ <span class="ml-0.5 text-gray-400 font-normal">Now Showing</span></span>
+                    <span>2026</span>
+                </div>
+                <h3 class="text-white text-[13px] font-medium leading-tight group-hover:text-blue-400 transition-colors line-clamp-2">
+                    Powerpuff Girls
+                </h3>
+            </div>
+        </div>
+
+         <div class="cursor-pointer group">
+            <div class="relative aspect-[2/3] rounded-sm overflow-hidden mb-2">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.0xT3Nv4bqd0dpYC9_FB_FQHaK-?rs=1&pid=ImgDetMain&o=7&rm=3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+            </div>
+
+            <div class="space-y-1">
+                <div class="flex items-center gap-2 text-[10px] text-gray-400">
+                    <span class="flex items-center text-yellow-500 font-bold">★ <span class="ml-0.5 text-gray-400 font-normal">Now Showing</span></span>
+                    <span>2026</span>
+                </div>
+                
+                <h3 class="text-white text-[13-px] font-medium leading-tight group-hover:text-blue-400 transition-colors">
+                    The Batman
+                </h3>
+            </div>
+        </div>
+
+        <div class="cursor-pointer group">
+            <div class="relative aspect-[2/3] rounded-sm overflow-hidden mb-2">
+                <img src="https://deadline.com/wp-content/uploads/2024/09/Pokemon-Movie-The-Movie-2000.jpg?resize=400" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+            </div>
+
+            <div class="space-y-1">
+                <div class="flex items-center gap-2 text-[10px] text-gray-400">
+                    <span class="flex items-center text-yellow-500 font-bold">★ <span class="ml-0.5 text-gray-400 font-normal">Now Showing</span></span>
+                    <span>2026</span>
+                </div>
+                
+                <h3 class="text-white text-[13px] font-medium leading-tight group-hover:text-blue-400 transition-colors">
+                    Pokemon:The Movie
+                </h3>
+            </div>
+        </div>
+
+        </div>
+</div>
+
+    <div id="main-wrapper" class="flex flex-col md:flex-row gap-8 items-start justify-center max-w-7xl mx-auto">
+        
+        <div id="form-container" class="w-full md:w-80 shrink-0">
+            <div id="form" class="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 shadow-2xl">
+                <div class="space-y-4 text-white">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Title:</label>
+                        <input type="text" id="title" class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-1 transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Seat Number:</label>
+                        <input type="number" id="seatNum" class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-1 transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Date:</label>
+                        <input type="date" id="date" class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-1 transition-all [color-scheme:dark]">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Name:</label>
+                        <input type="text" id="name" class="w-full bg-transparent border-b border-white/50 focus:border-white outline-none py-1 transition-all">
+                    </div>
+
+                    <div class="flex flex-col gap-3 pt-4">
+                        <button id="add" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition-colors cursor-pointer">
+                            Reserve
+                        </button>
+                        <button id="update" class="w-full border border-white/50 hover:bg-white/10 text-white py-2 rounded-lg transition-colors cursor-pointer">
+                            Update
+                        </button>
+                        <input type="hidden" id="ID">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full overflow-hidden rounded-xl border border-[#0F2854] shadow-xl bg-white/5">
+            <div class="overflow-x-auto max-h-[600px]">
+                <table class="w-full text-sm text-left border-collapse">
+                    <thead class="sticky top-0 bg-[#4988C4] text-[#0F2854] uppercase font-bold">
+                        <tr>
+                            <th class="p-4 border-b border-[#0F2854]">Title</th>
+                            <th class="p-4 border-b border-[#0F2854]">Seat</th>
+                            <th class="p-4 border-b border-[#0F2854]">Date</th>
+                            <th class="p-4 border-b border-[#0F2854]">Name</th>
+                            <th class="p-4 border-b border-[#0F2854] text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="content" class="text-white">
+                        </tbody>
+                </table>
+            </div>
+        </div>
 
     </div>
 
-    <div class="mt-6 px-20  overflow-y-auto h-screen flex justify-center">
-        <table class="table-auto border-spacing-0 border-2 border-red-800 h-1/2">
-            <thead class="sticky top-0 z-10">
-                <tr class="bg-red-900">
-                    <th class="p-3 text-left text-white">Title</th>
-                    <th class="p-3 text-left text-white">Sear Number</th>
-                    <th class="p-3 text-left text-white">Date</th>
-                    <th class="p-3 text-left text-white">Name</th>
-                    <th class="p-3 text-left text-white">Action</th>
-                </tr>
-            </thead>
-            <tbody id="content"></tbody>
-        </table>
-    </div>
-
-
-
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
