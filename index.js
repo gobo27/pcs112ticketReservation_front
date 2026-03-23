@@ -10,7 +10,7 @@ submit.addEventListener('click', () => {
     let name = document.querySelector("#name").value;
     let formData={title,seatNum,date,name};
 
-    fetch('http://localhost:7400/api/add', {
+    fetch('https://pcs112ticketreservation-back-1.onrender.com/api/add', {
         method: 'POST',
         body: JSON.stringify(formData), 
         headers: {
@@ -29,7 +29,7 @@ window.addEventListener('load', () => {
 
 function getUsers(){
     let html = ""
-    fetch('http://localhost:7400/api/view', {mode:'cors'})
+    fetch('https://pcs112ticketreservation-back-1.onrender.com/api/view', {mode:'cors'})
 
     .then(response=>{
         console.log(response);
@@ -39,9 +39,6 @@ function getUsers(){
     .then(data=>{
         console.log(data);
         data.forEach(element=>{
-            // html+=`<li> ${element.first_name} ${element.last_name} <a href="javascript:void(0)" onClick="deleteMember(${element.id})">Delete</a>
-            // <a href="javascript:void(0)" onClick="updateMember(${element.id})">Update</a></li>`
-
             html+=`
             <tr>
                 <td>${element.title} </td>
@@ -49,8 +46,8 @@ function getUsers(){
                 <td>${element.date}</td>
                 <td>${element.name}</td>
                 <td>
-                    <a href="javascript:void(0)" onclick="deleteMember(${element.id})" class="border-red-800 border rounded-lg px-2 w-auto hover:bg-red-800 hover:text-white mr-2"> Delete</a>
-                    <a href="javascript:void(0)" onclick="updateMember(${element.id})" class="border-red-800 border rounded-lg px-2 w-auto hover:bg-red-800 hover:text-white"> Update</a>
+                    <a href="javascript:void(0)" onclick="deleteMember(${element.id})" class="border-[0F2854] border rounded-lg px-2 w-auto hover:bg-[0F2854] hover:text-white mr-2"> Delete</a>
+                    <a href="javascript:void(0)" onclick="updateMember(${element.id})" class="border-[0F2854] border rounded-lg px-2 w-auto hover:bg-[0F2854]hover:text-white"> Update</a>
                 </td>
             </tr>`    
         })
@@ -70,7 +67,7 @@ function deleteMember(id){
     if (confirm("Press a button!") == true) {
         
     
-        fetch("http://localhost:7400/api/delete",{
+        fetch("https://pcs112ticketreservation-back-1.onrender.com/api/delete",{
             method:'DELETE',
             body: JSON.stringify({id}),
             headers:{
@@ -90,7 +87,7 @@ function deleteMember(id){
 
     // search
     function updateMember(id){
-        fetch (`http://localhost:7400/api/view/${id}` )
+        fetch (`https://pcs112ticketreservation-back-1.onrender.com/api/view/${id}` )
         .then( response => response.json())
         .then(data => {
             
@@ -116,7 +113,7 @@ function deleteMember(id){
     
     let formData = {title, seatNum, date, name, id};
 
-        fetch (`http://localhost:7400/api/update`, {
+        fetch (`https://pcs112ticketreservation-back-1.onrender.com/api/update`, {
             method: 'PUT',
             body: JSON.stringify(formData),
             headers : {
